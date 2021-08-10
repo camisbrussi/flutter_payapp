@@ -3,8 +3,7 @@
 <p align="center">
  
   <a href="https://github.com/camisbrussi/flutter_payapp/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/flutter_payapp/4School_API">
-  </a>
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/camisbrussi/flutter_payapp">
 
 </p>
 
