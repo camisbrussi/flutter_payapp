@@ -2,8 +2,8 @@
 
 <p align="center">
  
-  <a href="https://github.com/camisbrussi/4School_API/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/camisbrussi/4School_API">
+  <a href="https://github.com/camisbrussi/flutter_payapp/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/flutter_payapp/4School_API">
   </a>
 
 </p>
@@ -22,8 +22,8 @@ O objetivo deste projeto é desenvolver um sistema que gerencie boletos bancári
 
 Criado por:
 - [Camila Sbrussi](https://github.com/camisbrussi/) 
-- [Daniela Fernanda da Silva]
-- [Felipe Augusto Dahmer]
+- [Daniela Fernanda da Silva](https://github.com/daniela-silva97)
+- [Felipe Augusto Dahmer](https://github.com/dahmer49)
 - [Maryhana Kuhn](https://github.com/maryhanakuhn/) 
 
 
