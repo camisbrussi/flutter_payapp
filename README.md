@@ -40,7 +40,6 @@ O objetivo deste projeto é desenvolver um sistema que gerencie boletos bancári
 | caption| ![title](https://d144mzi0q5mijx.cloudfront.net/img/L/E/Lexend-Deca-Regular.png ) |13px |400 | background, shape ou body|
 | captionBold| ![title](https://d144mzi0q5mijx.cloudfront.net/img/L/E/Lexend-Deca-Regular.png ) |13px |600 | background, shape ou body|
 
-
 ## Criado por:
 - [Camila Sbrussi](https://github.com/camisbrussi/) 
 - [Daniela Fernanda da Silva](https://github.com/daniela-silva97)
@@ -48,7 +47,6 @@ O objetivo deste projeto é desenvolver um sistema que gerencie boletos bancári
 - [Maryhana Kuhn](https://github.com/maryhanakuhn/) 
 
 
-
 Professor Orientador da disciplina: ALEXANDRE WOLF
  
-Design do projeto baseado no nlw-together 
+Design baseado em um projeto disponibilizado pela RocketSeat
