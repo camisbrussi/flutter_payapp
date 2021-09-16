@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "272337420491",
-    "project_id": "payappp-9950d",
-    "storage_bucket": "payappp-9950d.appspot.com"
+    "project_number": "373459478648",
+    "project_id": "pay-app-c16b4",
+    "storage_bucket": "pay-app-c16b4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:272337420491:android:14e8b9f4c5c67f79e39b4e",
+        "mobilesdk_app_id": "1:373459478648:android:60a64417f7884e2f3da58d",
         "android_client_info": {
           "package_name": "com.example.payapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "272337420491-1hpb4o5h3khneud9b56mb43h49a18r6r.apps.googleusercontent.com",
+          "client_id": "373459478648-buck5uip6bqjrvqtggb5s37iv2r3chl9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.payapp",
-            "certificate_hash": "47189b04242aafc3c924c542129f124f423f0527"
+            "certificate_hash": "2b1ead3146ad52bdeec47a13ea3e05138de306d1"
           }
         },
         {
-          "client_id": "272337420491-qgj7tfhvlqp13o2utjg4insgqhifdbk9.apps.googleusercontent.com",
+          "client_id": "373459478648-0uht6tmdk4qthlrbbt0vkaufr5vpd279.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0b0QGnC-9WSLZZn45Twhi7bQjDp_aTn8"
+          "current_key": "AIzaSyD7IpPT9HGXGh34OpW0ICMzr_J59eoc5m8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "272337420491-qgj7tfhvlqp13o2utjg4insgqhifdbk9.apps.googleusercontent.com",
+              "client_id": "373459478648-0uht6tmdk4qthlrbbt0vkaufr5vpd279.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
