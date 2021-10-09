@@ -12,10 +12,10 @@ class BarcodeScannerController {
   BarcodeScannerStatus get status => statusNotifier.value;
   set status(BarcodeScannerStatus status) => statusNotifier.value = status;
 
-  final barcodeScanner = GoogleMlKit.vision.barcodeScanner();
+  var barcodeScanner = GoogleMlKit.vision.barcodeScanner();
+  CameraController? cameraController;
 
   InputImage? imagePicker;
-  CameraController? cameraController;
 
   void getAvailableCameras() async {
     try {
@@ -105,8 +105,7 @@ class BarcodeScannerController {
             );
             final inputImageCamera = InputImage.fromBytes(
                 bytes: bytes, inputImageData: inputImageData);
-
-            await scannerBarCode(inputImageCamera);
+            scannerBarCode(inputImageCamera);
           } catch (e) {
             print(e);
           }
