@@ -81,8 +81,10 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                     primaryOnPressed: () {
                       Navigator.pushReplacementNamed(context, "/insert_boleto");
                     },
-                    secondaryLabel: "Adicionar da galeria",
-                    secondaryOnPressed: () {})),
+                    secondaryLabel: "Ler o número",
+                    secondaryOnPressed: () {
+                      Navigator.pushReplacementNamed(context, "/ocr_page");
+                    })),
           ),
           ValueListenableBuilder<BarcodeScannerStatus>(
               valueListenable: controller.statusNotifier,

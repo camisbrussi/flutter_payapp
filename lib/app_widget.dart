@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:payapp/modules/barcode_scanner/barcode_scanner_page.dart';
 import 'package:payapp/modules/insert_boleto/insert_boleto_page.dart';
+import 'package:payapp/ocr_page.dart';
 import 'package:payapp/shared/models/user_model.dart';
 
 import 'modules/home/home_page.dart';
@@ -32,6 +33,7 @@ class AppWidget extends StatelessWidget {
           "/home": (context) => HomePage(user: ModalRoute.of(context)!.settings.arguments as UserModel),
           "/login": (context) => LoginPage(),
           "/barcode_scanner": (context) => BarcodeScannerPage(),
+          "/ocr_page": (context) => OCRPage(),
           "/insert_boleto": (context) => InsertBoletoPage(
             barcode: ModalRoute.of(context) != null ? ModalRoute.of(context)!.settings.arguments.toString() : null,
           ),

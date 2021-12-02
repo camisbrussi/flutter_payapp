@@ -10,7 +10,15 @@ class OCRPage extends StatefulWidget {
 }
 class _OCRPageState extends State<OCRPage> {
 int _ocrCamera = FlutterMobileVision.CAMERA_BACK;
-  String _text = "TEXT";
+String _text = "";
+
+@override
+  void initState() {
+    _read();
+    // TODO: implement initState
+    super.initState();
+  }
+
 @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +26,7 @@ int _ocrCamera = FlutterMobileVision.CAMERA_BACK;
         backgroundColor: Colors.white70,
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: Text('OCR In Flutter'),
+            title: Text('Ler o número'),
             centerTitle: true,
           ),
           body: Container(
@@ -33,7 +41,7 @@ int _ocrCamera = FlutterMobileVision.CAMERA_BACK;
                 Center(
                   child: RaisedButton(
                    onPressed: _read,
-                   child: Text('Scanning',
+                   child: Text('Iniciar',
                      style: TextStyle(fontSize: 16),
                    ),
                   ),
@@ -52,12 +60,7 @@ Future<Null> _read() async {
         waitTap: true,
       );
       setState(() {
-        for (var word in texts) {
-          if (word.value.length > 50) {
-            _text = word.value;
-            break;
-          }
-        }
+          Navigator.pushReplacementNamed(context, "/insert_boleto", arguments: texts[0].value);
       });
     } on Exception {
       texts.add( OcrText('Failed to recognize text'));
