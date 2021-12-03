@@ -32,9 +32,8 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyles.titleRegular,
                     children: [
                       TextSpan(
-                        text: "${widget.user.name}", 
-                        style: TextStyles.titleBoldBackground
-                      )
+                          text: "${widget.user.name}",
+                          style: TextStyles.titleBoldBackground)
                     ]),
               ),
               subtitle: Text("Mantenha suas contas em dia",
@@ -46,21 +45,15 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(5),
                     image: DecorationImage(
-                      image: NetworkImage(widget.user.photoURL)
-                    )
-                  ),
+                        image: NetworkImage(widget.user.photoURL))),
               ),
             ),
           ),
         ),
       ),
       body: [
-        MeusBoletosPage(
-          key: UniqueKey()
-        ),
-        ExtractPage(
-          key: UniqueKey()
-        )
+        MeusBoletosPage(key: UniqueKey()),
+        ExtractPage(key: UniqueKey())
       ][controller.currentPage],
       bottomNavigationBar: Container(
           height: 90,
@@ -72,10 +65,10 @@ class _HomePageState extends State<HomePage> {
                     controller.setPage(0);
                     setState(() {});
                   },
-                  icon: Icon(
-                    Icons.home,
-                    color: controller.currentPage == 0 ? AppColors.primary : AppColors.body 
-                  )),
+                  icon: Icon(Icons.home,
+                      color: controller.currentPage == 0
+                          ? AppColors.primary
+                          : AppColors.body)),
               GestureDetector(
                 onTap: () async {
                   await Navigator.pushNamed(context, "/barcode_scanner");
@@ -98,10 +91,10 @@ class _HomePageState extends State<HomePage> {
                     controller.setPage(1);
                     setState(() {});
                   },
-                  icon: Icon(
-                    Icons.description_outlined, 
-                    color: controller.currentPage == 1 ? AppColors.primary : AppColors.body 
-                  ))
+                  icon: Icon(Icons.description_outlined,
+                      color: controller.currentPage == 1
+                          ? AppColors.primary
+                          : AppColors.body))
             ],
           )),
     );
