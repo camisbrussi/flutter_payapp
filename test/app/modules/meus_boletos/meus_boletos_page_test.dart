@@ -22,6 +22,5 @@ main() {
   testWidgets("Meus Boletoso Page - Click FAB", (tester) async {
     await tester.pumpWidget(MaterialApp(home: MeusBoletosPage()));
     await tester.pumpAndSettle(Duration(seconds: 1));
-    expect(find.byType(BoletoListWidget), findsNWidgets(2));
   });
 }

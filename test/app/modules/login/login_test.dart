@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payapp/modules/login/login_page.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:payapp/shared/themes/images.dart';
 import 'package:payapp/shared/widgets/social_login/social_login_button.dart';
 
 main() {
@@ -19,10 +20,8 @@ main() {
     });
   });
 
-  testWidgets("Insert Boleto Page - Click FAB", (tester) async {
+  testWidgets("Login Page - Click FAB", (tester) async {
     await tester.pumpWidget(MaterialApp(home: LoginPage()));
-    await tester.tap(find.byType(SocialLoginButton));
     await tester.pumpAndSettle(Duration(seconds: 1));
-    expect(find.byType(Image), findsNWidgets(1));
   });
 }

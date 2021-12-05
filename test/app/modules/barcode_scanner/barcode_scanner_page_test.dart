@@ -14,7 +14,7 @@ main() {
   testWidgets("Barcode Scanner Page - Init, Title, FAB", (tester) async {
     await tester.pumpWidget(MaterialApp(home: BarcodeScannerPage()));
 
-    expect(find.text("Escaneie o código de barras do bolet"), findsOneWidget);
+    expect(find.text("Escaneie o código de barras do boleto"), findsOneWidget);
     expect(find.byType(BackButton), findsOneWidget);
   });
 
