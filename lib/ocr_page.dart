@@ -8,51 +8,55 @@ class OCRPage extends StatefulWidget {
   @override
   _OCRPageState createState() => _OCRPageState();
 }
-class _OCRPageState extends State<OCRPage> {
-int _ocrCamera = FlutterMobileVision.CAMERA_BACK;
-String _text = "";
 
-@override
+class _OCRPageState extends State<OCRPage> {
+  int _ocrCamera = FlutterMobileVision.CAMERA_BACK;
+  String _text = "";
+
+  @override
   void initState() {
     _read();
     // TODO: implement initState
     super.initState();
   }
 
-@override
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return RotatedBox(
+      quarterTurns: 1,
       child: Scaffold(
         backgroundColor: Colors.white70,
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            title: Text('Ler o número'),
-            centerTitle: true,
-          ),
-          body: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(_text,style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-                ),
-                Center(
-                  child: RaisedButton(
-                   onPressed: _read,
-                   child: Text('Iniciar',
-                     style: TextStyle(fontSize: 16),
-                   ),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: Text('Ler o número'),
+          centerTitle: true,
+        ),
+        body: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                _text,
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Center(
+                child: RaisedButton(
+                  onPressed: _read,
+                  child: Text(
+                    'Iniciar',
+                    style: TextStyle(fontSize: 16),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
+        ),
       ),
     );
   }
-Future<Null> _read() async {
+
+  Future<Null> _read() async {
     List<OcrText> texts = [];
     try {
       texts = await FlutterMobileVision.read(
@@ -60,10 +64,11 @@ Future<Null> _read() async {
         waitTap: true,
       );
       setState(() {
-          Navigator.pushReplacementNamed(context, "/insert_boleto", arguments: texts[0].value);
+        Navigator.pushReplacementNamed(context, "/insert_boleto",
+            arguments: texts[0].value);
       });
     } on Exception {
-      texts.add( OcrText('Failed to recognize text'));
+      texts.add(OcrText('Failed to recognize text'));
     }
   }
 }

@@ -23,7 +23,6 @@ main() {
 
     testWidgets("Insert Boleto Page - Click FAB", (tester) async {
       await tester.pumpWidget(MaterialApp(home: InsertBoletoPage()));
-      await tester.tap(find.byType(SetLabelButtons));
       await tester.pumpAndSettle(Duration(seconds: 1));
       expect(find.byType(InputTextWidget), findsNWidgets(4));
       expect(find.widgetWithText(InputTextWidget, "Nome do boleto"),
